@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 @app.route('/api/case/<case_type>/<int:case_number>/<int:filing_year>', methods=['GET'])
 def get_case(case_type, case_number, filing_year):
-    # You can add more dummy cases here if needed
     if case_type == 'SCA' and case_number == 1040 and filing_year == 2020:
         return jsonify({
             "caseType": "SCA",

@@ -1,19 +1,5 @@
-# Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Flask & local environment
-instance/
+*.pyc
+queries.db
 .env
-.env.*
 
-# VS Code settings (if any)
-.vscode/
-
-# macOS or Windows system files
-.DS_Store
-Thumbs.db
-
-# Virtual environment (if any)
-venv/

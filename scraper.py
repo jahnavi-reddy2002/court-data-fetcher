@@ -2,7 +2,6 @@ import requests
 
 def fetch_case_details(case_type, case_number, filing_year):
     url = f"http://localhost:8000/api/case/{case_type}/{case_number}/{filing_year}"
-    
     response = requests.get(url)
 
     if response.status_code == 404:
@@ -11,6 +10,10 @@ def fetch_case_details(case_type, case_number, filing_year):
         raise Exception("Mock API not reachable.")
 
     return response.json()
+
+
+
+
 
 
 
