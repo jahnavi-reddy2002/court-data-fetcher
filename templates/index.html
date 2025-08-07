@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Court Data Lookup</title>
+</head>
+<body>
+    <h2>Search Court Case</h2>
+    <form method="POST">
+        <label>Case Type:</label>
+        <input type="text" name="case_type" required><br><br>
+        <label>Case Number:</label>
+        <input type="text" name="case_number" required><br><br>
+        <label>Filing Year:</label>
+        <input type="text" name="filing_year" required><br><br>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if case_data %}
+        <h3>Case Details</h3>
+        <ul>
+            {% for key, value in case_data.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
